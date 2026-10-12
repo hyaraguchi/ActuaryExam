@@ -37,7 +37,8 @@
 % ---------------------------------------------------------
 % Cover
 % ---------------------------------------------------------
-\newcommand{\ExamCover}{%
+% 引数１：科目、引数2：ver
+\newcommand{\ExamCover}[2]{%
   \thispagestyle{empty}%
   \begin{tikzpicture}[remember picture,overlay]
 %    \draw[NEPrimary,line width=1.0pt]
@@ -57,7 +58,7 @@
       {\fontsize{15pt}{20pt}\selectfont 年金2次};
     \node[align=center,text=NEPrimary,font=\sffamily\bfseries]
       at ([yshift=-1.15cm]current page.center)
-      {\fontsize{20pt}{27pt}\selectfont DB問題集};
+      {\fontsize{20pt}{27pt}\selectfont #1問題集};
 
 %    \draw[NEBorder,line width=0.6pt]
 %      ([xshift=3.0cm,yshift=-6.15cm]current page.north west)
@@ -67,8 +68,8 @@
 %      {\small 確定給付企業年金法・厚生年金保険法\\[2pt]
 %       条文・制度・要件・正誤・穴埋め};
     \node[anchor=east,text=NEGray,font=\sffamily\footnotesize]
-      at ([xshift=-2.0cm,yshift=1.55cm]current page.south east)
-      {ver2026.0.0};
+      at ([xshift=-3.0cm,yshift=1.55cm]current page.south east)
+      {ver#2};
   \end{tikzpicture}%
   \null
   \clearpage
