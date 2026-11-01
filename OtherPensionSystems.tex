@@ -1,0 +1,66 @@
+\documentclass[a4paper,11pt,dvipdfmx]{jsarticle}
+
+\usepackage[
+  a4paper,
+  dvipdfm,
+  top=20mm,
+  bottom=20mm,
+  left=20mm,
+  right=20mm
+]{geometry}
+
+\usepackage{nenkinexam}
+\usepackage{enumerate}
+\usepackage{color}
+\usepackage{comment}
+\usepackage{url}
+\usepackage{tocloft}
+\usepackage{otf}
+\usepackage{amsmath, amssymb}
+\usepackage{bxwareki}
+
+
+% 目次の体裁を整える
+\setlength{\cftsecnumwidth}{4em}
+\setlength{\cftsubsecnumwidth}{4em}
+
+%ページ番号
+\pagestyle{plain}
+
+
+\begin{document}
+
+
+
+\ExamCover{その他の年金制度 }{2026.0.0}
+
+\tableofcontents
+
+\newpage
+
+%和暦表示用の前準備
+\warekisetdate{\the\year}{\the\month}{\the\day}
+
+\input{OtherPensionSystems_chap/ChusyokigyoTaisyokukinKyousai.tex}
+\input{OtherPensionSystems_chap/TokuteiGyosyuTaisyokukinkyosai.tex}
+\input{OtherPensionSystems_chap/TokuteiTaisyokukinkyosai.tex}
+\input{OtherPensionSystems_chap/Syokibokigyokyosai.tex}
+\input{OtherPensionSystems_chap/KokuminNenkinKikin.tex}
+\input{OtherPensionSystems_chap/Tsusankigyonenkin.tex}
+\input{OtherPensionSystems_chap/Others.tex}
+
+
+
+\end{document}
+
+\begin{comment}
+  %コピー用
+\begin{fillblank}
+  \noindent \textbf{◯DB則}
+  \begin{lawstructure}
+    \begin{lawarticle}{第三条}{確定給付企業年金の実施}
+      
+    \end{lawarticle}
+  \end{lawstructure}
+\end{fillblank}
+\end{comment}
